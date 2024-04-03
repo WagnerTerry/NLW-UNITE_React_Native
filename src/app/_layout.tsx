@@ -1,4 +1,4 @@
-import "../styles/global.css"
+import "@/styles/global.css"
 // _layout - arquivo de configuração
 
 import { Slot } from "expo-router"
