@@ -7,7 +7,7 @@ import { Link } from 'expo-router'
 
 export default function Register() {
     return (
-        <View className='flex-1 bg-green-500 items-center justify-center'>
+        <View className="flex-1 bg-green-500 items-center justify-center p-8">
             <StatusBar barStyle={"light-content"} />
 
             <Image
@@ -34,11 +34,11 @@ export default function Register() {
                     <Input.Field placeholder='E-mail' keyboardType='email-address' />
                 </Input>
 
-                <Button title='Realizar inscrição' isLoading />
+                <Button title='Realizar inscrição' />
 
                 <Link
                     href="/"
-                    className='text-gray-100 text-base font-bold text-center mt-8'
+                    className="text-gray-100 text-base font-bold text-center mt-8"
                 >
                     Já possui ingresso?
                 </Link>

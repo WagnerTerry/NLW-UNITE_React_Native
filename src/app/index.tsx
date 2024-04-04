@@ -7,7 +7,7 @@ import { Link } from 'expo-router'
 
 export default function Home() {
     return (
-        <View className='flex-1 bg-green-500 items-center justify-center'>
+        <View className="flex-1 bg-green-500 items-center justify-center p-8">
             <StatusBar barStyle={"light-content"} />
 
             <Image
@@ -22,17 +22,19 @@ export default function Home() {
                         color={colors.green[200]}
                         size={20}
                     />
-                    <Input.Field />
-
-                    <Button title='Acessar credencial' isLoading />
-
-                    <Link
-                        href='/register'
-                        className='text-gray-100 text-base font-bold text-center mt-8'
-                    >
-                        Ainda não possui ingresso?
-                    </Link>
+                    <Input.Field
+                        placeholder="Código do ingresso"
+                    />
                 </Input>
+
+                <Button title='Acessar credencial' />
+
+                <Link
+                    href='/register'
+                    className='text-gray-100 text-base font-bold text-center mt-8'
+                >
+                    Ainda não possui ingresso?
+                </Link>
             </View>
         </View>
 
