@@ -7,3 +7,4 @@
 - configurar o babel para sdk 50+
 - configurar o metro.config.js sdk 50+
 - npx expo install expo-font @expo-google-fonts/roboto
+- npx expo install expo-image-picker
