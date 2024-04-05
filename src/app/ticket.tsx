@@ -22,7 +22,6 @@ export default function Ticket() {
             })
 
             if (result.assets) {
-                console.log("result.assets[0].uri", result.assets[0].uri)
                 setImage(result.assets[0].uri)
             }
 

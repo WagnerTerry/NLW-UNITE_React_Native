@@ -10,7 +10,7 @@ export function QRCode({ value, size }: Props) {
         <QRCodeSvg
             value={value}
             size={size}
-            color={colors.white}
+            // color={colors.white}
             logoBackgroundColor="transparent"
         />
     )

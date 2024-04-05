@@ -9,3 +9,4 @@
 - npx expo install expo-font @expo-google-fonts/roboto
 - npx expo install expo-image-picker
 - npx expo install react-native-svg react-native-qrcode-svg
+- npm i axios
