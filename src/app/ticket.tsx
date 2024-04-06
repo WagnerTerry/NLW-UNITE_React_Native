@@ -1,4 +1,4 @@
-import { View, StatusBar, Text, ScrollView, TouchableOpacity, Alert, Modal } from "react-native";
+import { View, StatusBar, Text, ScrollView, TouchableOpacity, Alert, Modal, Share } from "react-native";
 import { Credential } from "@/components/credential";
 import { Header } from "@/components/header";
 import { FontAwesome } from "@expo/vector-icons"
@@ -14,6 +14,19 @@ export default function Ticket() {
     const [expandQRCode, setExpandQRCode] = useState(false)
 
     const badgeStore = useBadgeStore()
+
+    async function handleShare() {
+        try {
+            if (badgeStore.data?.checkInURL) {
+                await Share.share({
+                    message: badgeStore.data.checkInURL
+                })
+            }
+        } catch (error) {
+            console.log(error)
+            Alert.alert("Compartilhar", "Não foi possível compartilhar")
+        }
+    }
 
     async function handleSelectImage() {
         try {
@@ -66,6 +79,7 @@ export default function Ticket() {
 
                 <Button
                     title="Compartilhar"
+                    onPress={handleShare}
                 />
 
                 <TouchableOpacity
