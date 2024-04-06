@@ -11,7 +11,6 @@ import { useBadgeStore } from "@/store/badge-store";
 import { Redirect } from "expo-router";
 
 export default function Ticket() {
-    const [image, setImage] = useState("")
     const [expandQRCode, setExpandQRCode] = useState(false)
 
     const badgeStore = useBadgeStore()
@@ -25,7 +24,7 @@ export default function Ticket() {
             })
 
             if (result.assets) {
-                setImage(result.assets[0].uri)
+                badgeStore.updateAvatar(result.assets[0].uri)
             }
 
         } catch (error) {
@@ -49,7 +48,6 @@ export default function Ticket() {
             >
                 <Credential
                     data={badgeStore.data}
-                    image={image}
                     onChangeAvatar={handleSelectImage}
                     onExpandQRCode={() => setExpandQRCode(true)}
                 />
