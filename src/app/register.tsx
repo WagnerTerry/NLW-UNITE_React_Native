@@ -36,6 +36,7 @@ export default function Register() {
 
         } catch (error) {
             console.log(error)
+            setIsLoading(false)
 
             if (axios.isAxiosError(error)) {
                 if (String(error.response?.data.message).includes("already registered")) {
@@ -43,8 +44,6 @@ export default function Register() {
                 }
             }
             return Alert.alert("Inscrição", "Não foi possivel fazer a inscrição")
-        } finally {
-            setIsLoading(false)
         }
     }
 
