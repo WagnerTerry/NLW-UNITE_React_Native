@@ -2,14 +2,16 @@ import { Image, ImageBackground, Text, TouchableOpacity, View } from "react-nati
 import { Feather } from "@expo/vector-icons";
 import { colors } from "@/styles/colors";
 import { QRCode } from "./qrcode";
+import { BadgeStore } from "@/store/badge-store";
 
 type Props = {
+    data: BadgeStore
     image?: string
     onChangeAvatar?: () => void
     onExpandQRCode?: () => void
 }
 
-export function Credential({ onChangeAvatar, onExpandQRCode, image }: Props) {
+export function Credential({ data, onChangeAvatar, onExpandQRCode, image }: Props) {
     return (
         <View className="w-full self-stretch items-center">
             <Image
@@ -23,8 +25,8 @@ export function Credential({ onChangeAvatar, onExpandQRCode, image }: Props) {
                     className="px-6 py-8 h-40 items-center self-stretch border-b border-white/10 overflow-hidden"
                 >
                     <View className="w-full flex-row items-center justify-between">
-                        <Text className="text-zinc-50 text-sm font-bold">Unite summit</Text>
-                        <Text className="text-zinc-50 text-sm font-bold">#123</Text>
+                        <Text className="text-zinc-50 text-sm font-bold">{data.eventTitle}</Text>
+                        <Text className="text-zinc-50 text-sm font-bold">#{data.id}</Text>
 
                     </View>
 
@@ -58,15 +60,15 @@ export function Credential({ onChangeAvatar, onExpandQRCode, image }: Props) {
                 }
 
                 <Text className="font-bold text-2xl text-zinc-50 mt-4">
-                    Wagner Gonçalves
+                    {data.name}
                 </Text>
 
                 <Text className="font-regular text-base text-zinc-50 mb-4">
-                    goncalveswagner15@gmail.com
+                    {data.email}
                 </Text>
 
                 <QRCode
-                    value="teste"
+                    value={data.checkInURL}
                     size={120}
                 />
 
