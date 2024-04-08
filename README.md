@@ -1,7 +1,19 @@
 # NLW UNITE React Native
 Aplicativo para obter ingresso de um evento
 
-## Dependências
+## 🛠️ Tecnologias
+
+- Expo
+- React Native
+- React Navigation
+- Axios
+- Moti
+- NativeWind
+- Tailwind 
+- Zustand
+- TypeScript
+
+## 📦 Dependências
 
 ```
 npx create-expo-app --template // Criar o projeto usando expo com template
