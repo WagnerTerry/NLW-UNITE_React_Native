@@ -10,5 +10,7 @@
 - npx expo install expo-image-picker
 - npx expo install react-native-svg react-native-qrcode-svg
 - npx expo install @react-native-async-storage/async-storage
+- npx expo install react-native-reanimated
+- npm i moti --legacy-peer-deps
 - npm i axios
 - npm i zustand

@@ -3,6 +3,7 @@ import { Feather } from "@expo/vector-icons";
 import { colors } from "@/styles/colors";
 import { QRCode } from "./qrcode";
 import { BadgeStore } from "@/store/badge-store";
+import { MotiView } from 'moti'
 
 type Props = {
     data: BadgeStore
