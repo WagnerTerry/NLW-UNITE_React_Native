@@ -14,3 +14,4 @@
 - npm i moti --legacy-peer-deps
 - npm i axios
 - npm i zustand
+ 
